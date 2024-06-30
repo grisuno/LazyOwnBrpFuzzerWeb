@@ -199,6 +199,45 @@
             });
             return parsedHeaders;
         }
+        function startRepeater() {
+            const url = document.getElementById('repeater-url').value;
+            const method = document.getElementById('repeater-method').value;
+            const headers = document.getElementById('repeater-headers').value;
+            const params = document.getElementById('repeater-params').value;
+            const body = document.getElementById('repeater-body').value;
+            const jsonData = document.getElementById('repeater-json-data').value;
+            const hideCode = document.getElementById('repeater-hide-code').value;
+        
+            fetch('/repeater', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    url: url,
+                    method: method,
+                    headers: headers ? JSON.parse(headers) : {},
+                    params: params ? JSON.parse(params) : {},
+                    body: body ? JSON.parse(body) : {},
+                    json_data: jsonData ? JSON.parse(jsonData) : {},
+                    hide_code: hideCode ? parseInt(hideCode) : null
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('results').innerHTML = `
+                    <h3>${data.message}</h3>
+                    <p>Repeater en ejecución con la URL: ${url}</p>
+                `;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('results').innerHTML = `
+                    <h3>Error al ejecutar el Repeater</h3>
+                    <p>${error}</p>
+                `;
+            });
+        }
 
   </script>
 </body>
