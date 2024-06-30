@@ -1,0 +1,204 @@
+
+<html><head><base href="https://github.com/grisuno/LazyOwnBrpFuzzerWeb/" />
+<title>LazyOwnBrpFuzzerWeb - Una herramienta web inspirada en Burp Suite</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+  }
+  .tool-panel {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .tool-panel h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  .input-group {
+    margin-bottom: 15px;
+  }
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .input-group input[type="text"], .input-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .button-group {
+    margin-top: 15px;
+  }
+  .button-group button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .results {
+    margin-top: 20px;
+    background-color: #e9e9e9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>LazyOwnBrpFuzzerWeb</h1>
+      <p>Una herramienta web inspirada en Burp Suite</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="tool-panel">
+      <h2>Interceptor de Solicitudes</h2>
+      <div class="input-group">
+        <label for="target-url">URL Objetivo:</label>
+        <input type="text" id="target-url" placeholder="https://ejemplo.com">
+      </div>
+      <div class="input-group">
+        <label for="request-headers">Encabezados de la Solicitud:</label>
+        <textarea id="request-headers" rows="5" placeholder="User-Agent: Mozilla/5.0&#10;Accept: text/html,application/xhtml+xml"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="request-body">Cuerpo de la Solicitud:</label>
+        <textarea id="request-body" rows="5" placeholder="param1=value1&param2=value2"></textarea>
+      </div>
+      <div class="button-group">
+        <button onclick="interceptRequest()">Interceptar y Modificar</button>
+        <button onclick="sendRequest()">Enviar Solicitud</button>
+      </div>
+    </div>
+
+    <div class="tool-panel">
+      <h2>Escáner de Vulnerabilidades</h2>
+      <div class="input-group">
+        <label for="scan-url">URL a Escanear:</label>
+        <input type="text" id="scan-url" placeholder="https://ejemplo.com">
+      </div>
+      <div class="button-group">
+        <button onclick="startVulnerabilityScan()">Iniciar Escaneo</button>
+      </div>
+    </div>
+
+    <div class="tool-panel">
+      <h2>Resultados</h2>
+      <div class="results" id="results">
+        Los resultados de las operaciones se mostrarán aquí.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function interceptRequest() {
+      const targetUrl = document.getElementById('target-url').value;
+      const headers = document.getElementById('request-headers').value;
+      const body = document.getElementById('request-body').value;
+      
+      // Aquí simularemos la intercepción
+      document.getElementById('results').innerHTML = `
+        <h3>Solicitud Interceptada</h3>
+        <p><strong>URL:</strong> ${targetUrl}</p>
+        <p><strong>Encabezados:</strong></p>
+        <pre>${headers}</pre>
+        <p><strong>Cuerpo:</strong></p>
+        <pre>${body}</pre>
+        <p>Modifica los datos según sea necesario y luego haz clic en "Enviar Solicitud".</p>
+      `;
+    }
+
+    function sendRequest() {
+      // Aquí simularemos el envío de la solicitud
+      document.getElementById('results').innerHTML = `
+        <h3>Solicitud Enviada</h3>
+        <p>La solicitud ha sido enviada al servidor. En una implementación real, aquí se mostrarían los resultados de la respuesta del servidor.</p>
+      `;
+    }
+
+  function interceptRequest() {
+    const targetUrl = document.getElementById('target-url').value;
+    const headers = document.getElementById('request-headers').value;
+    const body = document.getElementById('request-body').value;
+
+    fetch('/intercept', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        target_url: targetUrl,
+        headers: headers,
+        body: body
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('results').innerHTML = `
+        <h3>${data.message}</h3>
+        <p><strong>URL:</strong> ${data.data.target_url}</p>
+        <p><strong>Encabezados:</strong></p>
+        <pre>${data.data.headers}</pre>
+        <p><strong>Cuerpo:</strong></p>
+        <pre>${data.data.body}</pre>
+      `;
+    });
+  }
+
+  function startVulnerabilityScan() {
+    const scanUrl = document.getElementById('scan-url').value;
+
+    fetch('/scan', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        scan_url: scanUrl
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('results').innerHTML = `
+        <h3>${data.message}</h3>
+        <p>Escaneando: ${data.data.scan_url}</p>
+        <p>Vulnerabilidades encontradas:</p>
+        <ul>
+          ${data.data.vulnerabilities.map(vul => `<li>${vul}</li>`).join('')}
+        </ul>
+      `;
+    });
+  }
+
+  </script>
+</body>
+</html>
