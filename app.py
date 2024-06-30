@@ -84,5 +84,6 @@ def repeater():
         'message': 'Repeater en ejecución'
     })
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Uncomment the following lines if you want to run the app locally without Gunicorn
+# if __name__ == '__main__':
+#     app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
