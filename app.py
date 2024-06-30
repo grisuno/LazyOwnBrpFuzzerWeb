@@ -26,18 +26,27 @@ def intercept():
     headers = data.get('headers')
     body = data.get('body')
 
-    # Aquí puedes usar funciones de lazyown_bprfuzzer para manejar la solicitud
-    # response = lazyown_bprfuzzer.some_function(target_url, headers, body)
+    # Usar la función send_request de lazyown_bprfuzzer para manejar la solicitud
+    response = lazyown_bprfuzzer.send_request(target_url, method='POST', headers=headers, data=body)
 
-    return jsonify({
-        'status': 'success',
-        'message': 'Solicitud interceptada',
-        'data': {
-            'target_url': target_url,
-            'headers': headers,
-            'body': body
-        }
-    })
+    if response:
+        return jsonify({
+            'status': 'success',
+            'message': 'Solicitud interceptada',
+            'data': {
+                'target_url': target_url,
+                'headers': headers,
+                'body': body,
+                'response_status_code': response.status_code,
+                'response_headers': dict(response.headers),
+                'response_body': response.text
+            }
+        })
+    else:
+        return jsonify({
+            'status': 'error',
+            'message': 'Error al interceptar la solicitud'
+        }), 500
 
 @app.route('/scan', methods=['POST'])
 def scan():
@@ -45,20 +54,34 @@ def scan():
     scan_url = data.get('scan_url')
 
     # Simula un escaneo de vulnerabilidades usando lazyown_bprfuzzer
-    # results = lazyown_bprfuzzer.scan_function(scan_url)
+    # Aquí llamamos a la función lazyfuzz para realizar un escaneo básico
+    # Nota: Esto es una simplificación, puedes personalizar la llamada según tus necesidades
+    results = lazyown_bprfuzzer.lazyfuzz(scan_url, 'GET', {}, {}, {}, {}, None, 'wordlist.txt', None)
     
-    results = {
-        'vulnerabilities': [
-            'XSS Reflejado en el parámetro \'q\' de la página de búsqueda',
-            'Posible inyección SQL en el formulario de inicio de sesión',
-            'Versión desactualizada de OpenSSL (CVE-2023-0286)'
-        ]
-    }
-
     return jsonify({
         'status': 'success',
         'message': 'Escaneo completado',
         'data': results
+    })
+
+@app.route('/repeater', methods=['POST'])
+def repeater():
+    data = request.get_json()
+    url = data.get('url')
+    method = data.get('method', 'GET')
+    headers = data.get('headers', {})
+    params = data.get('params', {})
+    body = data.get('body', {})
+    json_data = data.get('json_data', {})
+    proxies = None  # Puedes ajustar esto si necesitas un proxy
+    hide_code = data.get('hide_code')
+
+    # Usar la función repeater de lazyown_bprfuzzer
+    lazyown_bprfuzzer.repeater(url, method, headers, params, body, json_data, proxies, hide_code)
+    
+    return jsonify({
+        'status': 'success',
+        'message': 'Repeater en ejecución'
     })
 
 if __name__ == '__main__':
