@@ -1,2 +1,6 @@
 Flask
 gunicorn
+requests
+argparse
+tempfile
+threading
