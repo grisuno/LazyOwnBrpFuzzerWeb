@@ -120,84 +120,85 @@
   </div>
 
   <script>
-    function interceptRequest() {
-      const targetUrl = document.getElementById('target-url').value;
-      const headers = document.getElementById('request-headers').value;
-      const body = document.getElementById('request-body').value;
-      
-      // Aquí simularemos la intercepción
-      document.getElementById('results').innerHTML = `
-        <h3>Solicitud Interceptada</h3>
-        <p><strong>URL:</strong> ${targetUrl}</p>
-        <p><strong>Encabezados:</strong></p>
-        <pre>${headers}</pre>
-        <p><strong>Cuerpo:</strong></p>
-        <pre>${body}</pre>
-        <p>Modifica los datos según sea necesario y luego haz clic en "Enviar Solicitud".</p>
-      `;
-    }
+        function interceptRequest() {
+            const targetUrl = document.getElementById('target-url').value;
+            const headers = document.getElementById('request-headers').value;
+            const body = document.getElementById('request-body').value;
 
-    function sendRequest() {
-      // Aquí simularemos el envío de la solicitud
-      document.getElementById('results').innerHTML = `
-        <h3>Solicitud Enviada</h3>
-        <p>La solicitud ha sido enviada al servidor. En una implementación real, aquí se mostrarían los resultados de la respuesta del servidor.</p>
-      `;
-    }
+            fetch('/intercept', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    target_url: targetUrl,
+                    headers: parseHeaders(headers),
+                    body: body
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('results').innerHTML = `
+                    <h3>${data.message}</h3>
+                    <p><strong>URL:</strong> ${data.data.target_url}</p>
+                    <p><strong>Encabezados:</strong></p>
+                    <pre>${JSON.stringify(data.data.headers, null, 2)}</pre>
+                    <p><strong>Cuerpo:</strong></p>
+                    <pre>${data.data.body}</pre>
+                `;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('results').innerHTML = `
+                    <h3>Error al interceptar la solicitud</h3>
+                    <p>${error}</p>
+                `;
+            });
+        }
 
-  function interceptRequest() {
-    const targetUrl = document.getElementById('target-url').value;
-    const headers = document.getElementById('request-headers').value;
-    const body = document.getElementById('request-body').value;
+        function startVulnerabilityScan() {
+            const scanUrl = document.getElementById('scan-url').value;
 
-    fetch('/intercept', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        target_url: targetUrl,
-        headers: headers,
-        body: body
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('results').innerHTML = `
-        <h3>${data.message}</h3>
-        <p><strong>URL:</strong> ${data.data.target_url}</p>
-        <p><strong>Encabezados:</strong></p>
-        <pre>${data.data.headers}</pre>
-        <p><strong>Cuerpo:</strong></p>
-        <pre>${data.data.body}</pre>
-      `;
-    });
-  }
+            fetch('/scan', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    scan_url: scanUrl
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('results').innerHTML = `
+                    <h3>${data.message}</h3>
+                    <p>Escaneando: ${data.data.scan_url}</p>
+                    <p>Vulnerabilidades encontradas:</p>
+                    <ul>
+                        ${data.data.vulnerabilities.map(vul => `<li>${vul}</li>`).join('')}
+                    </ul>
+                `;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('results').innerHTML = `
+                    <h3>Error al realizar el escaneo</h3>
+                    <p>${error}</p>
+                `;
+            });
+        }
 
-  function startVulnerabilityScan() {
-    const scanUrl = document.getElementById('scan-url').value;
-
-    fetch('/scan', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        scan_url: scanUrl
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('results').innerHTML = `
-        <h3>${data.message}</h3>
-        <p>Escaneando: ${data.data.scan_url}</p>
-        <p>Vulnerabilidades encontradas:</p>
-        <ul>
-          ${data.data.vulnerabilities.map(vul => `<li>${vul}</li>`).join('')}
-        </ul>
-      `;
-    });
-  }
+        function parseHeaders(headers) {
+            const lines = headers.split('\n');
+            const parsedHeaders = {};
+            lines.forEach(line => {
+                const [key, value] = line.split(': ');
+                if (key && value) {
+                    parsedHeaders[key] = value;
+                }
+            });
+            return parsedHeaders;
+        }
 
   </script>
 </body>
