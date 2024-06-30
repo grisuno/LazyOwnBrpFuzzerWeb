@@ -110,6 +110,31 @@
         <button onclick="startVulnerabilityScan()">Iniciar Escaneo</button>
       </div>
     </div>
+    <h2>Repeater</h2>
+    <form id="repeater-form" onsubmit="event.preventDefault(); startRepeater();">
+        <label for="repeater-url">URL:</label>
+        <input type="text" id="repeater-url" name="url" required><br>
+        
+        <label for="repeater-method">Método HTTP:</label>
+        <input type="text" id="repeater-method" name="method" value="GET" required><br>
+        
+        <label for="repeater-headers">Encabezados (formato JSON):</label><br>
+        <textarea id="repeater-headers" name="headers" rows="5" cols="50"></textarea><br>
+        
+        <label for="repeater-params">Parámetros (formato JSON):</label><br>
+        <textarea id="repeater-params" name="params" rows="5" cols="50"></textarea><br>
+        
+        <label for="repeater-body">Cuerpo (formato JSON):</label><br>
+        <textarea id="repeater-body" name="body" rows="5" cols="50"></textarea><br>
+        
+        <label for="repeater-json-data">Datos JSON (formato JSON):</label><br>
+        <textarea id="repeater-json-data" name="json_data" rows="5" cols="50"></textarea><br>
+        
+        <label for="repeater-hide-code">Código HTTP para ocultar:</label>
+        <input type="number" id="repeater-hide-code" name="hide_code"><br>
+
+        <button type="submit">Iniciar Repeater</button>
+    </form>
 
     <div class="tool-panel">
       <h2>Resultados</h2>
