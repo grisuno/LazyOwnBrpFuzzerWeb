@@ -1,0 +1,1162 @@
+{
+  "concepts": [
+    {
+      "name": "repeater",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 4,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "autor",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "com",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "correo",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "creaci",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "descripci",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "dot",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "electr",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "fecha",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "gmail",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "gpl",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "gris",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "grisiscomeback",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "iscomeback",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "licencia",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "nico",
+      "files": [
+        "app.py",
+        "lazyown_bprfuzzer.py"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    }
+  ],
+  "relations": [
+    {
+      "source": "autor",
+      "target": "com",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "correo",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "creaci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "descripci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "dot",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "electr",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "fecha",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "gmail",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "gpl",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "gris",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "grisiscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "iscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "licencia",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "nico",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "autor",
+      "target": "repeater",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "autor",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "correo",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "creaci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "descripci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "dot",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "electr",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "fecha",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "gmail",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "gpl",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "gris",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "grisiscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "iscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "licencia",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "nico",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "com",
+      "target": "repeater",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "autor",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "com",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "creaci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "descripci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "dot",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "electr",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "fecha",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "gmail",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "gpl",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "gris",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "grisiscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "iscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "licencia",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "nico",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "correo",
+      "target": "repeater",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "autor",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "com",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "correo",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "descripci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "dot",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "electr",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "fecha",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "gmail",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "gpl",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "gris",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "grisiscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "iscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "licencia",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "nico",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "creaci",
+      "target": "repeater",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "autor",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "com",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "correo",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "creaci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "dot",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "electr",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "fecha",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "gmail",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "gpl",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "gris",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "grisiscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "iscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "licencia",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "nico",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "descripci",
+      "target": "repeater",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "autor",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "com",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "correo",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "creaci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "descripci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "electr",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "fecha",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "gmail",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "gpl",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "gris",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "grisiscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "iscomeback",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "licencia",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "nico",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "dot",
+      "target": "repeater",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "autor",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "com",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "correo",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "creaci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "descripci",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "dot",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "fecha",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "gmail",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "gpl",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    },
+    {
+      "source": "electr",
+      "target": "gris",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->lazyown_bprfuzzer.py"
+      ]
+    }
+  ],
+  "dialectic": [
+    "Thesis: `autor` centralizes 2 files; Antithesis: `com` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?",
+    "Thesis: `autor` centralizes 2 files; Antithesis: `correo` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?",
+    "Thesis: `autor` centralizes 2 files; Antithesis: `creaci` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?",
+    "Thesis: `autor` centralizes 2 files; Antithesis: `descripci` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?",
+    "Thesis: `autor` centralizes 2 files; Antithesis: `dot` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?",
+    "Thesis: `autor` centralizes 2 files; Antithesis: `electr` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?",
+    "Thesis: `autor` centralizes 2 files; Antithesis: `fecha` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?",
+    "Thesis: `autor` centralizes 2 files; Antithesis: `gmail` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?",
+    "Thesis: `autor` centralizes 2 files; Antithesis: `gpl` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?",
+    "Thesis: `autor` centralizes 2 files; Antithesis: `gris` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `depends_on` explicit?"
+  ]
+}
